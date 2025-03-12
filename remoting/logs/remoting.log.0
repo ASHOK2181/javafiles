@@ -1,0 +1,6 @@
+Mar 12, 2025 6:51:23 AM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1741762043770 hasn't completed by 1741762283771
+	at hudson.remoting.PingThread.ping(PingThread.java:135)
+	at hudson.remoting.PingThread.run(PingThread.java:87)
+

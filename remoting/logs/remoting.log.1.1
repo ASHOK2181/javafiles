@@ -1,0 +1,21 @@
+Mar 09, 2025 6:19:35 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1741544135718 hasn't completed by 1741544375718
+	at hudson.remoting.PingThread.ping(PingThread.java:135)
+	at hudson.remoting.PingThread.run(PingThread.java:87)
+
+Mar 09, 2025 7:15:26 PM hudson.remoting.SynchronousCommandTransport$ReaderThread run
+INFO: I/O error in channel channel
+java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:80)
+Caused by: java.io.EOFException
+	at java.base/java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2915)
+	at java.base/java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3410)
+	at java.base/java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:954)
+	at java.base/java.io.ObjectInputStream.<init>(ObjectInputStream.java:392)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:50)
+	at hudson.remoting.Command.readFrom(Command.java:141)
+	at hudson.remoting.Command.readFrom(Command.java:127)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:35)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:62)
+
